@@ -188,6 +188,88 @@
             display: block;
         }
 
+/* Education Section */
+#education {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.education-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.education-text {
+    flex: 1;
+}
+
+.education-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.education-item {
+    display: flex;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 20px;
+    min-width: 40px;
+}
+
+.education-details h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.institution {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #34495e;
+    line-height: 1.6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-content {
+        flex-direction: column;
+    }
+    
+    .education-item {
+        flex-direction: column;
+    }
+    
+    .education-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -380,10 +462,11 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Suyog<span>Havare</span></div>
+                <div class="logo">SS<span>H</span></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -399,9 +482,9 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="https://placehold.co/200x200/667eea/ffffff?text=SH" alt="Suyog Havare" class="hero-img">
+                <img src="https://thaka.bing.com/th/id/OIP.ciAJF7DQFOS4cuBZ-KdbPAAAAA?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Suyog Havare" class="hero-img">
                 <h1>Suyog Havare</h1>
-                <p>Web Developer & Software Engineer</p>
+                <p>Machine Learning & Image Processing</p>
                 <a href="#contact" class="btn">Get In Touch</a>
             </div>
         </div>
@@ -414,17 +497,65 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Hello! I'm Suyog Havare</h3>
-                    <p>I'm a passionate web developer with expertise in creating dynamic and responsive websites. With a strong foundation in programming and design, I strive to build seamless user experiences.</p>
-                    <p>My journey in web development started several years ago, and since then I've worked with various technologies and frameworks to deliver high-quality web solutions.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blogging and mentoring.</p>
+                    <p>I am Suyog Havare, a Computer Engineer and aspiring researcher, currently pursuing my M.Tech in Communication and Signal Processing (CSP) at IIT Bombay (Class of 2027) with a strong focus on Signal Processing, Artificial Intelligence, and Machine Learning.
+                        I hold a B.E. in Computer Engineering from Vidyalankar Institute of Technology, Mumbai, where I graduated with distinction (CGPA: 9.91) and specialized in Data Science. My academic journey has been marked by a deep curiosity for solving real-world problems through technology.</p>
+                    <p>Beyond academics, I am a business enthusiast who enjoys exploring how technology intersects with society, startups, and sustainable innovation. My goal is to leverage AI/ML and advanced signal processing to create meaningful impact—building solutions that are not only technically robust but also socially relevant.</p>
                     <a href="#contact" class="btn">Contact Me</a>
                 </div>
-                <div class="about-img">
-                    <img src="https://placehold.co/400x500/3498db/ffffff?text=About+Me" alt="About Suyog Havare">
-                </div>
+                
             </div>
         </div>
     </section>
+
+    <!-- Education Section -->
+<section id="education">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-content">
+            <div class="education-text">
+                <h3>My Educational Journey</h3>
+                <p>My academic background has provided me with a strong foundation in technology and problem-solving skills that I apply to my web development work every day.</p>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                        <p class="institution">University of Pune</p>
+                        <p class="duration">2018 - 2022</p>
+                        <p class="description">Focused on software engineering principles, algorithms, data structures, and web technologies. Completed several projects including a responsive web application for campus resource management.</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h4>Full Stack Web Development Certification</h4>
+                        <p class="institution">Udemy</p>
+                        <p class="duration">2022</p>
+                        <p class="description">Mastered MERN stack development (MongoDB, Express.js, React, Node.js) through hands-on projects and comprehensive coursework.</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="education-details">
+                        <h4>Data Structures and Algorithms Specialization</h4>
+                        <p class="institution">Coursera</p>
+                        <p class="duration">2021</p>
+                        <p class="description">Advanced training in algorithm design and analysis, with practical implementation experience in various programming languages.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -522,7 +653,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h3>Location</h3>
-                            <p>Pune, Maharashtra, India</p>
+                            <p>Mumbai, Maharashtra, India</p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -559,7 +690,7 @@
                 <a href="https://twitter.com/suyoghavare" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.instagram.com/suyoghavare" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2023 Suyog Havare. All Rights Reserved.</p>
+            <p>&copy; 2025 Suyog Havare. All Rights Reserved.</p>
         </div>
     </footer>
 
