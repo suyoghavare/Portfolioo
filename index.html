@@ -22,6 +22,12 @@
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
         }
 
         .container {
@@ -40,6 +46,11 @@
             font-size: 2.5rem;
             color: #2c3e50;
             position: relative;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .section-title {
+            color: #f0f0f0;
         }
 
         .section-title::after {
@@ -76,6 +87,12 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        body.dark-mode header {
+            background: #1e1e1e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav {
@@ -89,6 +106,11 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .logo {
+            color: #f0f0f0;
         }
 
         .logo span {
@@ -98,6 +120,7 @@
         .nav-links {
             display: flex;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links li {
@@ -111,6 +134,10 @@
             transition: color 0.3s;
         }
 
+        body.dark-mode .nav-links a {
+            color: #f0f0f0;
+        }
+
         .nav-links a:hover {
             color: #3498db;
         }
@@ -119,40 +146,108 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .menu-btn {
+            color: #f0f0f0;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #333;
+            transition: color 0.3s;
+            margin-left: 20px;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #ffcc00;
         }
 
         /* Hero Section */
-        .hero {
-            padding-top: 150px;
-            padding-bottom: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
+/* Hero Section */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f8ae60 0%, #9e2323 100%);
+    color: white;
+    text-align: center;
+    transition: background 0.5s ease;
+}
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #024554 0%, #6dd5ed 100%);
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.3s ease;
+}
 
-        .hero-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            margin-bottom: 30px;
-        }
+body.dark-mode .hero h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.3s ease;
+}
+
+body.dark-mode .hero p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .hero-img {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+.hero .btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-5px);
+}
+
+body.dark-mode .hero .btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .hero .btn:hover {
+    background: white;
+    color: #2c3e50;
+}
 
         /* About Section */
         .about-content {
@@ -169,6 +264,11 @@
             font-size: 1.8rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .about-text h3 {
+            color: #f0f0f0;
         }
 
         .about-text p {
@@ -180,6 +280,11 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        body.dark-mode .about-img {
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
 
         .about-img img {
@@ -188,90 +293,101 @@
             display: block;
         }
 
-/* Education Section */
-#education {
-    background-color: #f9f9f9;
-    padding: 80px 0;
-}
+        /* Education Section */
+        #education {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+            transition: background-color 0.3s;
+        }
 
-.education-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-}
+        body.dark-mode #education {
+            background-color: #1a1a1a;
+        }
 
-.education-text {
-    flex: 1;
-    
-}
+        .education-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
 
-.education-text h3 {
+        .education-text {
+            flex: 1;
+        }
 
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
+        .education-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
 
-.education-item {
-    display: flex;
-    margin-bottom: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-}
+        body.dark-mode .education-text h3 {
+            color: #f0f0f0;
+        }
 
-.education-item:hover {
-    transform: translateY(-5px);
-}
+        .education-item {
+            display: flex;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
 
-.education-icon {
-    font-size: 1.5rem;
-    color: #3498db;
-    margin-right: 20px;
-    min-width: 40px;
-}
+        body.dark-mode .education-item {
+            background: #2a2a2a;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+        }
 
-.education-details h4 {
-    color: #2c3e50;
-    margin-bottom: 8px;
-}
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
 
-.institution {
-    font-weight: 600;
-    color: #3498db;
-    margin-bottom: 5px;
-}
+        .education-icon {
+            font-size: 1.5rem;
+            color: #3498db;
+            margin-right: 20px;
+            min-width: 40px;
+        }
 
-.duration {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
+        .education-details h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
 
-.description {
-    color: #34495e;
-    line-height: 1.6;
-}
+        body.dark-mode .education-details h4 {
+            color: #f0f0f0;
+        }
 
+        .institution {
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
 
+        .duration {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .education-content {
-        flex-direction: column;
-    }
-    
-    .education-item {
-        flex-direction: column;
-    }
-    
-    .education-icon {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-}
+        body.dark-mode .duration {
+            color: #b0b0b0;
+        }
+
+        .description {
+            color: #34495e;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .description {
+            color: #d0d0d0;
+        }
+
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -285,7 +401,12 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .skill {
+            background: #2a2a2a;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
         }
 
         .skill:hover {
@@ -301,6 +422,19 @@
         .skill h3 {
             margin-bottom: 15px;
             color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .skill h3 {
+            color: #f0f0f0;
+        }
+
+        .skill p {
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .skill p {
+            color: #d0d0d0;
         }
 
         /* Projects Section */
@@ -315,6 +449,12 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .project {
+            background: #2a2a2a;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
         }
 
         .project-img {
@@ -330,10 +470,20 @@
         .project h3 {
             margin-bottom: 15px;
             color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .project h3 {
+            color: #f0f0f0;
         }
 
         .project p {
             margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .project p {
+            color: #d0d0d0;
         }
 
         /* Contact Section */
@@ -360,6 +510,14 @@
             color: #3498db;
         }
 
+        .contact-item div {
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .contact-item div {
+            color: #f0f0f0;
+        }
+
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -374,6 +532,11 @@
 
         .form-group label {
             font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .form-group label {
+            color: #f0f0f0;
         }
 
         .form-group input,
@@ -382,6 +545,16 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
+            background: white;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea {
+            background: #2a2a2a;
+            border-color: #444;
+            color: #f0f0f0;
         }
 
         .form-group textarea {
@@ -395,6 +568,11 @@
             color: white;
             padding: 40px 0;
             text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background: #1a1a1a;
         }
 
         .social-links {
@@ -433,6 +611,10 @@
                 transition: all 0.3s ease;
             }
 
+            body.dark-mode .nav-links {
+                background: #1e1e1e;
+            }
+
             .nav-links.active {
                 left: 0;
             }
@@ -451,6 +633,19 @@
 
             .about-content {
                 flex-direction: column;
+            }
+
+            .education-content {
+                flex-direction: column;
+            }
+            
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .education-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
 
             .contact-container {
@@ -472,6 +667,11 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
                 <div class="menu-btn">
                     <i class="fas fa-bars"></i>
@@ -516,11 +716,7 @@
         <div class="education-content">
             <div class="education-text">
                 <h3>My Educational Journey</h3>
-                <p style="margin-bottom:20px;">My academic background has provided me with a strong foundation in technology and problem-solving skills that I apply to my work every day.
-
-
-                </p>
-                
+                <p style="margin-bottom:20px;">My academic background has provided me with a strong foundation in technology and problem-solving skills that I apply to my work every day.</p>
                 
                 <div class="education-item">
                     <div class="education-icon">
@@ -546,8 +742,6 @@
                     </div>
                 </div>
                 
-                
-                
                 <div class="education-item">
                     <div class="education-icon">
                         <i class="fas fa-award"></i>
@@ -571,34 +765,34 @@
             <h2 class="section-title">My Skills</h2>
             <div class="skills-container">
                 <div class="skill">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <p>Semantic markup, accessibility, and modern HTML features.</p>
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Data analysis, machine learning, and automation scripting.</p>
                 </div>
                 <div class="skill">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                    <p>Responsive design, flexbox, grid, animations, and preprocessors.</p>
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised and unsupervised learning, model evaluation, and deployment.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Analysis</h3>
+                    <p>Statistical analysis, data visualization, and insights generation.</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Database design, query optimization, and data management.</p>
                 </div>
                 <div class="skill">
                     <i class="fab fa-js"></i>
                     <h3>JavaScript</h3>
-                    <p>ES6+, DOM manipulation, async programming, and frameworks.</p>
+                    <p>Front-end development, interactive web applications, and APIs.</p>
                 </div>
                 <div class="skill">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                    <p>Component-based architecture, hooks, state management, and routing.</p>
-                </div>
-                <div class="skill">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                    <p>Server-side development, REST APIs, Express.js, and authentication.</p>
-                </div>
-                <div class="skill">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases</h3>
-                    <p>MongoDB, SQL, database design, and optimization.</p>
+                    <i class="fas fa-code"></i>
+                    <h3>C++</h3>
+                    <p>Algorithm implementation, data structures, and performance optimization.</p>
                 </div>
             </div>
         </div>
@@ -610,26 +804,26 @@
             <h2 class="section-title">My Projects</h2>
             <div class="projects-container">
                 <div class="project">
-                    <img src="https://placehold.co/400x200/667eea/ffffff?text=Project+1" alt="Project 1" class="project-img">
+                    <img src="https://placehold.co/400x200/667eea/ffffff?text=ML+Project" alt="Project 1" class="project-img">
                     <div class="project-content">
-                        <h3>E-Commerce Website</h3>
-                        <p>A fully responsive e-commerce platform with product filtering, cart functionality, and secure checkout.</p>
+                        <h3>Image Classification Model</h3>
+                        <p>Developed a convolutional neural network for image classification using TensorFlow and Keras.</p>
                         <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="https://placehold.co/400x200/3498db/ffffff?text=Project+2" alt="Project 2" class="project-img">
+                    <img src="https://placehold.co/400x200/3498db/ffffff?text=Data+Analysis" alt="Project 2" class="project-img">
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A drag-and-drop task management application with user authentication and real-time updates.</p>
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Created an interactive dashboard for data analysis using Python, Plotly, and Dash.</p>
                         <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="https://placehold.co/400x200/2c3e50/ffffff?text=Project+3" alt="Project 3" class="project-img">
+                    <img src="https://placehold.co/400x200/2c3e50/ffffff?text=Web+App" alt="Project 3" class="project-img">
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>A weather application that displays current and forecasted weather using a third-party API.</p>
+                        <h3>Predictive Analytics Web App</h3>
+                        <p>Built a web application for predictive analytics using Flask and machine learning models.</p>
                         <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
@@ -695,7 +889,7 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/suyoghavare" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/suyoghavare" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/suyog.havare" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/suyoghavare" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <p>&copy; 2025 Suyog Havare. All Rights Reserved.</p>
         </div>
@@ -742,6 +936,36 @@
                     });
                 }
             });
+        });
+
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference or respect OS preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Set initial theme
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
         });
     </script>
 </body>
